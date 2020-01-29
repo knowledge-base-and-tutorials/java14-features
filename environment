@@ -1,0 +1,2 @@
+export JAVA_HOME=~/work/openjdk/14/jdk14/build/linux-x86_64-server-release/images/jdk
+export MAVEN_HOME=~/devtools/build/maven
