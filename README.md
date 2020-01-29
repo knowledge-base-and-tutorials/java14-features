@@ -13,14 +13,14 @@ If you plan to binge-watch the series, I created a [playlist :movie_camera:](htt
 
 |JEP #|JEP Name|Status|Video Link|Source Link|Java Doc Link
 | --- | ------ | --- | :----: | :--: | :--: |
-| 361 | Switch Expressions| Standard | [:tv:](https://youtu.be/rSGbMqX5RzU)| [:page_with_curl:](./src/main/java/com/github/kbnt/java14/se/SwitchExpressions.java)| [:books:](javadoc)
-| 368| Text Blocks | Second Preview| [:tv:](https://youtu.be/QU9pQGCVrPY)| [:page_with_curl:](./src/main/java/com/github/kbnt/java14/tb/TextBlocks.java)| [:books:](javadoc)
-| 305| Pattern Matching for _instanceof_ | Preview| [:tv:](https://youtu.be/SJmGyzLayJc)| [:page_with_curl:](./src/main/java/com/github/kbnt/java14/pm/PatternMatchingForInstanceof.java)| [:books:](javadoc)
-| 359| Records | Preview| [:tv:](https://youtu.be/zA11PetGZuk)| [:page_with_curl:](./src/main/java/com/github/kbnt/java14/records/Records.java)| [:books:](javadoc)
+| 361 | Switch Expressions| Standard | [:tv:](https://youtu.be/rSGbMqX5RzU)| [:scroll:](./src/main/java/com/github/kbnt/java14/se/SwitchExpressions.java)| [:books:](./javadoc/com/github/kbnt/java14/se/SwitchExpressions.html)
+| 368| Text Blocks | Second Preview| [:tv:](https://youtu.be/QU9pQGCVrPY)| [:scroll:](./src/main/java/com/github/kbnt/java14/tb/TextBlocks.java)| [:books:](./javadoc/com/github/kbnt/java14/tb/TextBlocks.html)
+| 305| Pattern Matching for _instanceof_ | Preview| [:tv:](https://youtu.be/SJmGyzLayJc)| [:scroll:](./src/main/java/com/github/kbnt/java14/pm/PatternMatchingForInstanceof.java)| [:books:](./javadoc/com/github/kbnt/java14/pm/PatternMatchingForInstanceof.html)
+| 359| Records | Preview| [:tv:](https://youtu.be/zA11PetGZuk)| [:scroll:](./src/main/java/com/github/kbnt/java14/records/Records.java)| [:books:](./javadoc/com/github/kbnt/java14/records/Records.html)
 
 ## DevOps Utilities
 |JEP #|JEP Name|Status|Video Link|Source Link|Java Doc Link
 | --- | ------ | --- | :----: | :--: | :--: |
-| 358 | Helpful NullPointerExceptions| Implemented | [:tv:](https://youtu.be/SdzzWN_DyIA)| [:page_with_curl:](./src/main/java/com/github/kbnt/java14/npe/)| [:books:](javadoc)
+| 358 | Helpful NullPointerExceptions| Implemented | [:tv:](https://youtu.be/SdzzWN_DyIA)| [:scroll:](./src/main/java/com/github/kbnt/java14/npe/HelpfulNPEMessages.java)| [:books:](./javadoc/com/github/kbnt/java14/npe/HelpfulNPEMessages.html)
 
 ### Stay Tuned :smile:!

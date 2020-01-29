@@ -194,6 +194,9 @@ public class TextBlocks {
    * {@code -Dnashorn.args=--language=es6}.
    * </ul>
    * 
+   * @throws javax.script.ScriptException when there was a problem running the script.
+   * @throws NoSuchMethodException when performing dynamic invocation
+   * 
    */
   public void example04Inception() throws ScriptException, NoSuchMethodException {
     insertExampleSeparator();
@@ -230,9 +233,9 @@ public class TextBlocks {
    * <b>Attribution</b>:
    * <ul>
    * <li>artwork by Joan Stark and published at <a href=
-   * "https://www.asciiart.eu/computers/smileys">https://www.asciiart.eu/computers/smileys<a/>.
+   * "https://www.asciiart.eu/computers/smileys">https://www.asciiart.eu/computers/smileys</a>.
    * <li>oneliner joke from unknown author published at <a href=
-   * "https://short-funny.com/one-liners.php">https://short-funny.com/one-liners.php</>
+   * "https://short-funny.com/one-liners.php">https://short-funny.com/one-liners.php</a>
    * </ul>
    * 
    */
