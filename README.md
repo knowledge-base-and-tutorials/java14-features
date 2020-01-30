@@ -24,3 +24,10 @@ If you plan to binge-watch the series, I created a [playlist :movie_camera:](htt
 | 358 | Helpful NullPointerExceptions| Implemented | [:tv:](https://youtu.be/SdzzWN_DyIA)| [:scroll:](./src/main/java/com/github/kbnt/java14/npe/HelpfulNPEMessages.java)
 
 ### Stay Tuned :smile:!
+
+## Other resources addressing the same topic
+While working on this material, I discovered many other good sources (different than the official [OpenJDK](https://openjdk.java.net/projects/jdk/14/) site) covering the new Java features. I decided to promote the ones that I liked, especially that they address the topic in a different format than the one I use:
+
+* [Vividcode.io](https://vividcode.io/jdk-14-new-features/) did a good job writing about the features and also providing code on [GitHub](https://github.com/VividcodeIO/jdk14-features).
+* [Infoq.com](https://www.infoq.com/news/2019/12/java14-feature-freeze/) did a summarization, but there is no deepdive there nor code available.
+* [Aboullaite.me](https://aboullaite.me/) addresses some of the new topics (the format is blogging).

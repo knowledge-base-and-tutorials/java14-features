@@ -9,6 +9,9 @@ import javax.script.ScriptException;
  * This class dives into the <a href="https://openjdk.java.net/jeps/368">JEP 368
  * (Text Blocks)</a> enhancement proposal.<br>
  * <br>
+ * A comprehensive material on this feature is this <a href="
+ * http://cr.openjdk.java.net/~jlaskey/Strings/TextBlocksGuide_v10.html">programmer's
+ * guide</a>.
  * 
  * Note that Java 14 sees this JEP as a second preview, so this is not entirely
  * new to Java 14.
@@ -21,11 +24,11 @@ public class TextBlocks {
   public static void main(String[] args) {
     try {
       TextBlocks tb = new TextBlocks();
-//      tb.example00OldWayVersusNewWay();
-//      tb.example01Description();
+      tb.example00OldWayVersusNewWay();
+      tb.example01Description();
       tb.example03StringStripIndent();
-//      tb.example04Inception();
-//      tb.example05Java14NewEscapeSequences();
+      tb.example04Inception();
+      tb.example05Java14NewEscapeSequences();
     } catch (Throwable e) {
       System.err.println("Oops, something went wrong with one of our examples:");
       e.printStackTrace();
@@ -43,7 +46,8 @@ public class TextBlocks {
   public void example00OldWayVersusNewWay() {
     insertExampleSeparator();
 
-    // I am sure you must have seen this at least once in your lifetime as a developer (some
+    // I am sure you must have seen this at least once in your lifetime as a
+    // developer (some
     // hardcoded SQL statement) - (source: https://openjdk.java.net/jeps/368)
     String oldSchoolSQLStatement = "SELECT `EMP_ID`, `LAST_NAME` FROM `EMPLOYEE_TB`\n"
         + "WHERE `CITY` = 'INDIANAPOLIS'\n" + "ORDER BY `EMP_ID`, `LAST_NAME`;\n";
@@ -60,7 +64,7 @@ public class TextBlocks {
         """;
     System.out.println();
     System.out.println("# New way to write the SQL statement (same output as previous one):");
-    System.out.println(newWaySQLStatement);   
+    System.out.println(newWaySQLStatement);
   }
 
   /**
@@ -126,7 +130,7 @@ public class TextBlocks {
     System.out.println(escapeSequences);
     System.out.println();
   }
-  
+
   /**
    * The <b>text blocks</b> feature is processed by the compiler in a particular
    * way (full description in the mentioned JEP document section called
@@ -194,8 +198,9 @@ public class TextBlocks {
    * {@code -Dnashorn.args=--language=es6}.
    * </ul>
    * 
-   * @throws javax.script.ScriptException when there was a problem running the script.
-   * @throws NoSuchMethodException when performing dynamic invocation
+   * @throws javax.script.ScriptException when there was a problem running the
+   *                                      script.
+   * @throws NoSuchMethodException        when performing dynamic invocation
    * 
    */
   public void example04Inception() throws ScriptException, NoSuchMethodException {
