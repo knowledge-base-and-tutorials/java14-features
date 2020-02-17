@@ -23,11 +23,20 @@ If you plan to binge-watch the series, I created a [playlist :movie_camera:](htt
 | --- | ------ | --- | :----: | :--: |
 | 358 | Helpful NullPointerExceptions| Implemented | [:tv:](https://youtu.be/SdzzWN_DyIA)| [:scroll:](./src/main/java/com/github/kbnt/java14/npe/HelpfulNPEMessages.java)
 
-### Stay Tuned :smile:!
+## New APIs
+|JEP #|JEP Name|Status|Video Link|Source Link
+| --- | ------ | --- | :----: | :--: |
+| 370 | Foreign-Memory Access API | Incubator | [:tv:](https://youtu.be/NwXzT8T6mb8)| [:scroll:](./src/main/java/com/github/kbnt/fma)
+
+### Stay Tuned :wink: !
 
 ## Other resources addressing the same topic
 While working on this material, I discovered many other good sources (different than the official [OpenJDK](https://openjdk.java.net/projects/jdk/14/) site) covering the new Java features. I decided to promote the ones that I liked, especially that they address the topic in a different format than the one I use:
 
+* [FOSDEM'20](https://fosdem.org/2020/schedule/track/free_java/) has a lot of talks and I can enumerate a few that personally saw:
+  * [State of OpenJDK](https://fosdem.org/2020/schedule/event/state_openjdk/) by Mark Reinhold the Chief  Architect of the Java Platform Group at Oracle.
+  * [ByteBuffers are dead, long live ByteBuffers!](https://fosdem.org/2020/schedule/event/bytebuffers/), a talk about [JEP 370](https://openjdk.java.net/jeps/370), by the owner of that JEP, 	Maurizio Cimadamore.
+  * [Helpful NullPointerExceptions - The little thing that became a JEP](https://fosdem.org/2020/schedule/event/npes/) by Christoph Langer, engineer in SAP's Java VM team.
 * [Vividcode.io](https://vividcode.io/jdk-14-new-features/) did a good job writing about the features and also providing code on [GitHub](https://github.com/VividcodeIO/jdk14-features).
 * [Infoq.com](https://www.infoq.com/news/2019/12/java14-feature-freeze/) did a summarization, but there is no deepdive there nor code available.
 * [Aboullaite.me](https://aboullaite.me/) addresses some of the new topics (the format is blogging).
