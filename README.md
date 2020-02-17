@@ -26,7 +26,7 @@ If you plan to binge-watch the series, I created a [playlist :movie_camera:](htt
 ## New APIs
 |JEP #|JEP Name|Status|Video Link|Source Link
 | --- | ------ | --- | :----: | :--: |
-| 370 | Foreign-Memory Access API | Incubator | [:tv:](https://youtu.be/NwXzT8T6mb8)| [:scroll:](./src/main/java/com/github/kbnt/fma/ForeignMemoryAccessExamples.java)
+| 370 | Foreign-Memory Access API | Incubator | [:tv:](https://youtu.be/NwXzT8T6mb8)| [:scroll:](./src/main/java/com/github/kbnt/java14/fma/)
 
 ### Stay Tuned :wink: !
 
