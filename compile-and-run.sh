@@ -4,4 +4,5 @@
 #./run/run-text-blocks.sh
 #./run/run-pattern-matching.sh
 #./run/run-records-examples.sh
-./run/run-helpful-npe-messages.sh
+#./run/run-helpful-npe-messages.sh
+./run/run-foreign-memory-access.sh

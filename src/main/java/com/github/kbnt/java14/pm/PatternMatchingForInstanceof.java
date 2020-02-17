@@ -28,7 +28,12 @@ package com.github.kbnt.java14.pm;
  * 
  * Back from the analogy, we are 9+ million Java developers... Imagine how many
  * times during the latest 20+ years we created redundant lines of code like
- * this..
+ * this...<br>
+ * <br>
+ * 
+ * Note that this might be just the beginning of similar features, like the
+ * <a href= "https://openjdk.java.net/jeps/8213076">pattern matching for
+ * switch</a>.
  * 
  * @author <a href="mailto:tech.meshter@gmail.com">Chris T</a>
  *

@@ -19,6 +19,7 @@
           <target>14</target>
           <compilerArgs>
             <compilerArg>--enable-preview</compilerArg>
+            <compilerArg>--add-modules=jdk.incubator.foreign</compilerArg>
           </compilerArgs>
         </configuration>
       </plugin>
