@@ -35,6 +35,7 @@ public class ForeignMemoryAccessExamples {
       fmae.example01Strides();
       fmae.example02Layout();
       fmae.example03SSNToCreditScore();
+      fmae.example04SSNToCreditScoreWithPadding();
     } catch (Throwable e) {
       System.err.println("Oops, something went wrong with one of our examples:");
       e.printStackTrace();
@@ -168,6 +169,62 @@ public class ForeignMemoryAccessExamples {
     // take the same segment and dump it into a file to analyze further what
     // happened
     Path path = Paths.get("target", "runtime", "fmae-memory-layouts.bin");
+    Files.createDirectories(path.getParent());
+    Files.createFile(path);
+
+    try (MemorySegment segment = MemorySegment.mapFromPath(path, ssnAndCredit.byteSize(), MapMode.READ_WRITE)) {
+      MemoryAddress base = segment.baseAddress();
+      for (int i = 0; i < numberOfElements; i++) {
+        char[] ssn = ((123456000 + i) + "").toCharArray();
+        for (int j = 0; j < ssn.length; j++) {
+          ssnHandle.set(base, (long) i, (long) j, ssn[j]);
+        }
+
+        creditScoreHandle.set(base, (long) i, 700 + i);
+      }
+
+      System.out.println("Memory flushed to file...");
+    }
+
+  }
+
+  /**
+   * The same example as above, but instead of using a different alignment, we
+   * will use padding.<br>
+   * <br>
+   * 
+   * <b>Credit:</b> this is not original work - Maurizio Cimadamore suggessted
+   * using padding as alternative to changing the alignment. <br>
+   * Other coworkers suggested that because of architectures considerents (CPU's
+   * register's structure), it would be best to pad the structures so they end up
+   * as multiples of 8 bytes.<br>
+   * In this particular case, if we use a compact memory, for one stucture we will
+   * use 9x2+4=22 bytes. A padding to get to 24 bytes would be recommended. The
+   * example below doesn't need the change for bit alignment.
+   * 
+   * @throws IOException
+   */
+  public void example04SSNToCreditScoreWithPadding() throws IOException {
+    insertExampleSeparator();
+
+    ByteOrder order = ByteOrder.nativeOrder();
+    MemoryLayout ssnAndCreditStruct = MemoryLayout.ofStruct(
+        MemoryLayout.ofSequence(9, MemoryLayout.ofValueBits(Character.SIZE, order)).withName("ssn"),
+        MemoryLayout.ofPaddingBits(16), MemoryLayout.ofValueBits(Integer.SIZE, order).withName("creditScore"));
+
+    int numberOfElements = 100;
+    MemoryLayout ssnAndCredit = MemoryLayout.ofSequence(numberOfElements, ssnAndCreditStruct);
+
+    System.out.println("Layout: " + ssnAndCredit);
+
+    VarHandle ssnHandle = ssnAndCredit.varHandle(char.class, PathElement.sequenceElement(),
+        PathElement.groupElement("ssn"), PathElement.sequenceElement());
+    VarHandle creditScoreHandle = ssnAndCredit.varHandle(int.class, PathElement.sequenceElement(),
+        PathElement.groupElement("creditScore"));
+
+    // take the same segment and dump it into a file to analyze further what
+    // happened
+    Path path = Paths.get("target", "runtime", "fmae-memory-layouts-padding.bin");
     Files.createDirectories(path.getParent());
     Files.createFile(path);
 
